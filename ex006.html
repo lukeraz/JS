@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#msg{
+           background: red; 
+           width: 200px;
+           height: 200px;
+           line-height: 200px;
+           font-size: normal 18pt arial;
+           color: white;
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id='msg' >
+        interaja...
+    </div>
+    <script>
+        var area = window.document.querySelector('div#msg')
+        area.addEventListener('onclick', clicou)
+        area.addEventListener('onmouseenter', entrou)
+        area.addEventListener('onmouseout', saiu)
+
+        function clicou(){
+            area.style.background='black'
+            area.innerText='Clicou'
+        }
+        function entrou(){
+            area.innerText='Entrou'
+        }
+        function saiu(){
+            area.innerText='Saiu'
+            area.style.background='red'
+        }
+    </script>
+</body>
+</html>
