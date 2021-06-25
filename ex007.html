@@ -5,23 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Numeros</title>
+    <style>
+        input{
+            font:normal 18pt Arial;
+            width: 50px;
+        }
+        div#op{
+            font: normal 28pt Arial;
+        }
+    </style>
 </head>
 <body>
     <h1>Somando Valores</h1>
-    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn1" id="txtn1" >  <!--barra para inserir numero-->
+     <div id='op'></div>
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value=" + " onclick="somar()"> <!--botão para somar-->
+    <input type="button" value=" - " onclick="subtrair()">
+    <input type="button" value=" / "  onclick="dividir()">
+    <input type="button" value=" x " onclick="multiplicar()">
+    
+   
     <div id='res'>Resultado</div>
     <script>
         function somar(){
-             var tn1 = window.document.getElementById('"txtn1"')
+            var o = window.document.getElementById('op')
+             var tn1 = window.document.getElementById('txtn1') 
              var tn2 = window.document.getElementById('txtn2')
              var res = window.document.getElementById('res')
              var n1 = Number(tn1.value)
              var n2 = Number(tn2.value)
              var soma = n1 + n2
-             res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${soma}`
+             res.innerHTML = soma
+             op.innerText ='+'
         }
+        function subtrair(){
+            var o = window.document.getElementById('op')
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var sub = n1 - n2
+            res.innerHTML = sub
+            op.innerText ='-'
+        }
+        function dividir(){
+            var o = window.document.getElementById('op')
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var d = n1 / n2
+            res.innerHTML = d
+            op.innerText='/'
+        }
+        function multiplicar(){
+            var o = window.document.getElementById('op')
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var mult = n1 * n2
+            res.innerHTML = mult
+            op.innerText='x'
+        }
+       
+
+        
     </script>
 </body>
 </html>
