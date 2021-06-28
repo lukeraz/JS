@@ -17,7 +17,7 @@ switch(diaSem){
         console.log('Quinta')
         break;
     case 5:
-        console.log('Sexta')
+    console.log('Sexta')
         break;
     case 6:
         console.log('Sabado')
