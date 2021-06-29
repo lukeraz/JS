@@ -23,5 +23,6 @@ switch(diaSem){
         console.log('Sabado')
         break;
     default:
+        console.log('Dia invalido')
         break;
 }

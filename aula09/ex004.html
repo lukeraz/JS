@@ -12,7 +12,7 @@
         var n2 = Number(window.prompt('Digite outro numero: '))
         var soma = n1 + n2
         window.alert(`O resultado da  soma entre ${n1} e ${n2}, é ${soma}`)
-        document.write(`O resultado ${soma} em Dolar canadense ${soma.TolocaleString('pt-BR', {style:'currency', currency: 'CAD'})}<br/>`)
+        document.write(`O resultado ${soma} em Dolar canadense ${soma.toLocaleString('pt-BR', {style:'currency', currency: 'CAD'})}<br/>`)
         document.write(`O resultado ${soma} em formato de reais, ${soma.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}<br/>`)
         document.write(`O resultado ${soma} em formato de dolar, ${soma.toLocaleString('pt-BR', {style:'currency', currency:'USD'})}<br/>`)
         document.write(`O resutaldo ${soma} em formato de euro, ${soma.toLocaleString('pt-BR', {style:'currency', currency:'EUR'})} `)
