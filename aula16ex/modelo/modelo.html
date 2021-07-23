@@ -10,21 +10,25 @@
 </head>
 <body>
     <header>
-        <h1>Tabuada</h1>
+        <h1>Analisando numeros</h1>
     </header>
     <section>
         <div>
             <p>
-                Numero: <input type="number" name="numero" id="txtn"> 
-                <input type="button" value="gerar" onclick="tabuada()">
+                Numero entre 1 e 100
+                <input type="number" name="txtn" id="txtn">
+                <input type="button" value="adicionar" onclick="adicionar()">
             </p>
         </div>
         <div>
-           <p>Resultado:</p>
-           <select name="Tabuada" id="seltab" size = 10>
-               <option>Digite um numero acima.</option>
-               
-           </select>
+             <select name="numtab" id="numtab" size=10></select>
+             <input type="button" value="Excluir" onclick="excluir()">            
+            <p>
+                <input type="button" value="Analizar" onclick="analizar()">
+            </p>
+          <p id='res'>
+              Resultado
+            </p>
         </div>
       
     </section>
